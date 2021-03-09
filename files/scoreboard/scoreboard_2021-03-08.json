@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "version": 1,
+    "request": "https://nba-prod-us-east-1-mediaops-stats.s3.amazonaws.com/NBA/liveData/scoreboard/todaysScoreboard_00.json",
+    "time": "2021-03-08 12:03:38.338",
+    "code": 200
+  },
+  "scoreboard": {
+    "gameDate": "2021-03-08",
+    "leagueId": "00",
+    "leagueName": "National Basketball Association",
+    "games": []
+  }
+}

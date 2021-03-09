@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.0.5/dist/js/adminlte.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.0.5/dist/css/adminlte.min.css">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.39.0/build/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.0.5/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/daterangepicker.css">
+  <!-- summernote -->
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js">-->
+</head>
+<body>
+  <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" role="banner" class="left-navigation w-nav"><a href="#" class="logo-link w-nav-brand">
+      <h1 class="brand-text">INCREDIBLE</h1>
+    </a>
+    <nav role="navigation" class="nav-menu w-nav-menu"><a href="#home" class="nav-link w-nav-link w--current">Home</a><a href="#about" class="nav-link w-nav-link">About</a><a href="#gallery" class="nav-link w-nav-link">Gallery</a><a href="#contact"
+        class="nav-link w-nav-link">Contact</a></nav>
+    <div class="hamburger-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+      <div class="w-icon-nav-menu"></div>
+    </div>
+    <div class="social-footer w-hidden-medium w-hidden-small w-hidden-tiny"><a href="#" class="social-icon-link w-inline-block"><img src="https://uploads-ssl.webflow.com/602aade16d3b406adc595054/602aade1b14b26e2682bc644_social-03-white.svg"
+          width="17" alt=""></a><a href="#" class="social-icon-link w-inline-block"><img src="https://uploads-ssl.webflow.com/602aade16d3b406adc595054/602aade1b14b2656f82bc60f_social-18-white.svg" width="17" alt=""></a><a href="#"
+        class="social-icon-link w-inline-block"><img src="https://uploads-ssl.webflow.com/602aade16d3b406adc595054/602aade1b14b264b322bc63e_social-15-white.svg" width="17" alt=""></a><a href="#" class="social-icon-link w-inline-block"><img
+          src="https://uploads-ssl.webflow.com/602aade16d3b406adc595054/602aade1b14b26ad7d2bc63f_social-14-white.svg" width="17" alt=""></a><a href="#" class="social-icon-link w-inline-block"><img
+          src="https://uploads-ssl.webflow.com/602aade16d3b406adc595054/602aade1b14b268b732bc63b_social-12-white.svg" width="17" alt=""></a><a href="#" class="social-icon-link w-inline-block"><img
+          src="https://uploads-ssl.webflow.com/602aade16d3b406adc595054/602aade1b14b2638ad2bc637_social-08-white.svg" width="17" alt=""></a><a href="#" class="social-icon-link w-inline-block"><img
+          src="https://uploads-ssl.webflow.com/602aade16d3b406adc595054/602aade1b14b26b8df2bc640_social-30-white.svg" width="17" alt=""></a></div>
+    <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
+  </div><!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<!-- ChartJS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="https://cdn.jsdelivr.net/npm/sparklines@1.3.0/source/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jquery.vmap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-knob@1.2.11/dist/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4@5.39.0/build/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@1.13.1/js/OverlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0-rc/dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0-rc/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0-rc/dist/js/pages/dashboard.js"></script>
+
+</body>
+</html>

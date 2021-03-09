@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+<% include partials/sideNav %>
+
+<!-- Content Header (Page header) -->
+<section class="content-header" style="margin:0 auto; width:85%">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box" id="card1">
+        <div class="box-body">
+          <div class="center" style="justify-content: center;">
+            <div class="img-center-container">
+              <img src="/resources/logoHere.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row" id="mainRow">
+    <div class="col-md-7" id="bets">
+      <div class="box" id="card1" style="min-height:50px">
+        <div class="box-header with-border" id="card1Header">
+          <div class="box-tools pull-right" style="left:0%">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+          </div>
+          <h3 class="box-title" id="card1HeaderTitle">Parlay #1</h3>
+        </div>
+        <div class="box-body with-border" id="card1Body" style="text-align: center;">
+          <b id="card1IntroText"> Use the Parlay Builder on the Left to Get Started </b>
+          <ul class="list-group list-group-unbordered" id="card1List">
+
+          </ul>
+        </div>
+        <div class="box-footer with-border" id="card1Footer">
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5" id="builder">
+      <div class="box" id="card1" style="min-height:100px">
+        <div class="box-header">
+          <h3 class="box-title" id="card1HeaderTitle">Parlay Builder</h3>
+        </div>
+        <div class="box-body">
+          <form style="text-align: center;">
+
+            <label for="player">Select Player:<span class="required">*</span></label>
+            <div class="autocomplete" style="width:100%;">
+              <input id="playerName" type="text" name="player" placeholder="Player">
+            </div>
+            <br />
+            <br />
+            <div class="row" style="text-align: center; padding-left:10%">
+
+              <div class="col-md-5">
+                <label for="betType">Select Bet Line:<span class="required">*</span></label>
+                <select class="form-control" data-cy="betLineDropDown" id="betLineDropDown" style="background-color:#f1f1f1; border-color:#f1f1f1; color:#777777; width:100%; display: inline-block;text-align: center;">
+                  <option selected="selected" disabled="true"> Bet Type </option>
+                  <option value="OVER" name="OVER">OVER</option>
+                  <option value="UNDER" name="UNDER">UNDER</option>
+                  <option value="TO SCORE" name="TO SCORE">TO SCORE</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="betType">Enter Total:<span class="required">*</span></label>
+                <input type="number" id="total" name="total" min="0" max="100" style="width:75%">
+              </div>
+            </div>
+            <br />
+            <label for="betType">Select Bet Type:<span class="required">*</span></label>
+            <select class="form-control" data-cy="betTypeDropDown" id="betTypeDropDown" style="background-color:#f1f1f1; border-color:#f1f1f1; color:#777777; width:75%; display: inline-block;text-align: center;">
+              <option selected="selected" disabled="true"> Value Type </option>
+              <option value="OVER" name="OVER">Points</option>
+              <option value="UNDER" name="UNDER">Assists</option>
+              <option value="TO SCORE" name="TO SCORE">3s</option>
+              <option value="TO SCORE" name="TO SCORE">Rebounds</option>
+            </select>
+            <br />
+          </form>
+        </div>
+
+        <div class="box-footer">
+          <div class="row centerButton" id="buttonRow">
+            <!--<div class="col-md-3">
+              <button type="button" class="btn btn-block btn-default"></button>
+            </div>
+            <div class="col-md-3">
+              <button type="button" class="btn btn-block btn-default" onclick='cacheParlays()'>Delete Leg</button>
+            </div>-->
+            <div class="col-md-6" id="addLegCol">
+              <button type="button" id="addLeg" class="btn btn-block btn-default" onclick='addLeg()'>Add Leg</button>
+            </div>
+            <div class="col-md-6" id="newParlayCol" style="display:none">
+              <button type="button" id="newParlay" class="btn btn-block btn-default" onclick='newParlay()'>Build New Parlay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="box" id="card1" style="min-height:350px">
+          <div class="box-header">
+
+          </div>
+          <div class="box-body">
+
+          </div>
+          <div class="box-footer">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="box" id="card1" style="min-height:350px">
+          <div class="box-header">
+
+          </div>
+          <div class="box-body">
+
+          </div>
+          <div class="box-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+</html>
+
+<script>
+  window.onload = (event) => {
+    loadPlayerNames().then(returnedData => {
+      autocomplete(document.getElementById("playerName"), returnedData)
+    })
+    readcachedBets()
+    //clearPlayersFromDB()
+    //refreshPageData();
+    //checkPlayerList();
+    //addAll()
+  };
+</script>
